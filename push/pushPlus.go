@@ -17,11 +17,11 @@ func (p *PushPlus) Init() func(kind, message string) {
 			message = fmt.Sprintf("![](%v)", "data:image/png;base64,"+message)
 		}
 		err := gout.POST("http://www.pushplus.plus/send").SetJSON(gout.H{
-			"token":    p.Token,
+			"token":85ce2f6d116b4c66bf28d160861b6ecf,
 			"title":    "study_xxqg",
 			"content":  message,
 			"template": "markdown",
-			"channel":  "wechat",
+			"channel":  "cp",
 		}).Do()
 		if err != nil {
 			log.Errorln(err.Error())
